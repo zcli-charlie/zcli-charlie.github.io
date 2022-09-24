@@ -5329,7 +5329,7 @@ function citation_meta_content(ref){
   return content;
 }
 
-var html$1 = "\n<style>\n  dt-banner {\n    background: #FFF59D;\n    display: block;\n    text-align: center;\n    color: black;\n    height: 70px;\n    line-height: 70px;\n  }\n</style>\n<div>This article is a draft, awaiting review for publication in Distill</div>\n";
+var html$1 = "";
 
 var banner = function(dom, data) {
   var banner = dom.createElement("dt-banner");
