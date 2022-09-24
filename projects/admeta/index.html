@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1080">
+    <script src="https://zcli-charlie.github.io/projects/admeta/assets/lib/template.v1.js"></script>
+
+    <!-- Katex -->
+    <!--<script src="assets/lib/auto-render.min.js"></script>-->
+    <!--<script src="assets/lib/katex.min.js"></script>-->
+    <link rel="stylesheet" href="https://zcli-charlie.github.io/projects/admeta/assets/lib/katex.min.css">
+    <link rel="stylesheet" type="text/css" href="https://zcli-charlie.github.io/projects/admeta/assets/widgets.css">
+
+    <!-- Required -->
+    <script src="https://zcli-charlie.github.io/projects/admeta/assets/lib/lib.js"></script>
+    <script src="https://zcli-charlie.github.io/projects/admeta/assets/utils.js"></script>
+
+    <script src="https://zcli-charlie.github.io/projects/admeta/assets/lib/contour_plot.js"></script>
+    <script src="https://zcli-charlie.github.io/projects/admeta/assets/iterates.js"></script>
+    <script src="https://zcli-charlie.github.io/projects/admeta/assets/iteratesb.js"></script>
+
+</head>
+
+
+<body>
+<dt-article class="centered">
+    <h1>EMA vs DEMA</h1>
+
+    <figure style = "position:relative; width:984px; height:400px;">
+        <div id="bananab" style="position:relative; border: 1px solid rgba(0, 0, 0, 0.2);"></div>
+        <div id="sliderAlphab" style="position:absolute; width:300px; height: 50px; left:20px; top: 320px;">
+            <text class="figtext" style="top: -5px; left: 20px; position: relative;">Step-size α = 0.0015</text>
+        </div>
+        <div id="sliderBetab" style="position:absolute; width: 300px; height: 50px; left: 280px; top: 320px;;">
+            <text class="figtext" style="top: -5px; left: 20px; position: relative;">Momentum β = 0.9</text>
+        </div>
+        <figcaption id="Bananacaptionb" style="position:absolute; width: 420px; height: 90px; left: 540px; top: 320px; font-weight: bold; font-size: 24px;">
+            Exponential Moving Average on SGD optimizer
+        </figcaption>
+    </figure>
+
+
+    <dt-byline class="l-page"></dt-byline>
+
+
+    <script>
+
+        // Render Foreground
+        var iterControlb = genIterDiagramb(bananaf, [1,1/3], [[-2,2],[2/3 + 0.4,-2/3 + 0.4]])
+            .alpha(0.0015)
+            .beta(0.9)
+            (d3.select("#bananab").style("position","relative"))
+
+        var iterChangeb = iterControlb.control
+        var getw0b = iterControlb.w0
+
+        var StepRange = d3.scaleLinear().domain([0,100]).range([0,0.0062])
+        var MomentumRange = d3.scaleLinear().domain([0,100]).range([0,0.98])
+
+        var updateb = function (i,j) { iterChangeb(i, 0, getw0b()) }
+
+        var sliderab = sliderGen([230, 40])
+            .ticks([0,0.003,0.006])
+            .ticktitles( function(d,i) { return ["0", "0.003", "0.006"][i]})
+            .change( function (i) {
+                d3.select("#sliderAlphab").selectAll(".figtext").html("Step-size α = " + getalphab().toPrecision(2) )
+                iterChangeb(getalpha(), getbeta(), getw0b() )
+            } )
+            .startxval(0.0015)
+            .cRadius(7)
+            .shifty(-12)
+            .margins(20,20)
+
+        var sliderbb = sliderGen([230, 40])
+            .ticks([0,0.5,0.99])
+            .change( function (i) {
+                d3.select("#sliderBetab").selectAll(".figtext").html("Momentum β = " + getbetab().toPrecision(2) )
+                iterChangeb(getalphab(), getbetab(), getw0b() )
+            } )
+            .cRadius(7)
+            .shifty(-12)
+            .startxval(0.9)
+            .margins(20,20)
+
+        var getalphab = sliderab( d3.select("#sliderAlphab")).xval
+        var getbetab  = sliderbb( d3.select("#sliderBetab")).xval
+
+        iterChangeb(getalphab(), getbetab(), getw0b() )
+
+    </script>
+
+
+    <figure style="position:relative; width:984px; height:500px;">
+        <div id="banana" style="position:relative; border: 1px solid rgba(0, 0, 0, 0.2);"></div>
+        <div id="sliderAlpha" style="position:absolute; width:300px; height: 50px; left:20px; top: 320px;">
+            <text class="figtext" style="top: -5px; left: 20px; position: relative;">Step-size α = 0.0015</text>
+        </div>
+        <div id="sliderBeta" style="position:absolute; width: 300px; height: 50px; left: 280px; top: 320px;;">
+            <text class="figtext" style="top: -5px; left: 20px; position: relative;">Momentum β = 0.6</text>
+        </div>
+        <div id="sliderLambda" style="position:absolute; width: 300px; height: 50px; left: 20px; top: 450px;;">
+            <text class="figtext" style="top: -5px; left: 20px; position: relative;">Lambda λ = 0.9</text>
+        </div>
+        <figcaption id="Bananacaption" style="position:absolute; width: 420px; height: 90px; left: 540px; top: 320px; font-weight: bold; font-size: 24px;">
+            Double Exponential Moving Average on SGD optimizer
+        </figcaption>
+    </figure>
+
+    <dt-byline class="l-page"></dt-byline>
+
+
+    <script>
+
+        // Render Foreground
+        var iterControl = genIterDiagram(bananaf, [1, 1 / 3], [[-2, 2], [2 / 3 + 0.4, -2 / 3 + 0.4]])
+            .alpha(0.001)
+            .beta(0)
+            .lambda(0.9)
+            (d3.select("#banana").style("position", "relative"))
+
+        var iterChange = iterControl.control
+        var getw0 = iterControl.w0
+
+        var StepRange = d3.scaleLinear().domain([0, 100]).range([0, 0.0062])
+        var MomentumRange = d3.scaleLinear().domain([0, 100]).range([0, 0.98])
+
+        var update = function (i, j) {
+            iterChange(i, 0, 0.9, getw0())
+        }
+
+        var slidera = sliderGen([230, 40])
+            .ticks([0, 0.005, 0.01])
+            .ticktitles(function (d, i) {
+                return ["0", "0.005", "0.01"][i]
+            })
+            .change(function (i) {
+                d3.select("#sliderAlpha").selectAll(".figtext").html("Step-size α = " + getalpha().toPrecision(4))
+                iterChange(getalpha(), getbeta(), getlambda(), getw0())
+            })
+            .startxval(0.0015)
+            .cRadius(7)
+            .shifty(-12)
+            .margins(20, 20)
+
+        var sliderb = sliderGen([230, 40])
+            .ticks([0, 0.5, 0.99])
+            .ticktitles(function (d, i) {
+                return ["0", "0.5", "0.99"][i]
+            })
+            .change(function (i) {
+                d3.select("#sliderBeta").selectAll(".figtext").html("Momentum β = " + getbeta().toPrecision(4))
+                iterChange(getalpha(), getbeta(), getlambda(), getw0())
+            })
+            .cRadius(7)
+            .shifty(-12)
+            .startxval(0.6)
+            .margins(20, 20)
+
+
+        var sliderl = sliderGen([230, 40])
+            .ticks([0, 0.5, 0.99])
+            .change(function (i) {
+                d3.select("#sliderLambda").selectAll(".figtext").html("Momentum λ = " + getlambda().toPrecision(4))
+                iterChange(getalpha(), getbeta(), getlambda(), getw0())
+            })
+            .cRadius(7)
+            .shifty(-12)
+            .startxval(0.9)
+            .margins(20, 20)
+
+        var getalpha = slidera(d3.select("#sliderAlpha")).xval
+        var getbeta = sliderb(d3.select("#sliderBeta")).xval
+        var getlambda = sliderl(d3.select("#sliderLambda")).xval
+
+        iterChange(getalpha(), getbeta(), getlambda(), getw0())
+
+    </script>
+
+
+</dt-article>
+
+</body>
+
+</html>
