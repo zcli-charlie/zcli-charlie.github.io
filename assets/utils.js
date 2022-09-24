@@ -811,20 +811,20 @@ function getStepsConvergence(Lambda, alpha) {
   Run Momentum the good old fashioned way - by iterating.
   > runMomentum(bananaf, [0,0], 0.00001, 0.5, 100)
 */
-// function runMomentum(f, w0, alpha, beta, totalIters) {
-//   var Obj = []; var W = []; var z = zeros(w0.length); var w = w0
-//   var fx = f(w0); var gx = fx[1]
-//   W.push(w0); Obj.push(fx[0])
-//   for (var i = 0; i < totalIters; i++) {
-//     var z = numeric.add(numeric.mul(beta, z), gx)
-//     var w = numeric.add(w, numeric.mul(-alpha, z))
-//     fx = f(w); gx = fx[1]
-//     if (w.every(isFinite)) {
-//       W.push(w); Obj.push(fx[0])
-//     } else{ break; }
-//   }
-//   return [Obj, W]
-// }
+function runMomentumb(f, w0, alpha, beta, totalIters) {
+  var Obj = []; var W = []; var z = zeros(w0.length); var w = w0
+  var fx = f(w0); var gx = fx[1]
+  W.push(w0); Obj.push(fx[0])
+  for (var i = 0; i < totalIters; i++) {
+    var z = numeric.add(numeric.mul(beta, z), gx)
+    var w = numeric.add(w, numeric.mul(-alpha, z))
+    fx = f(w); gx = fx[1]
+    if (w.every(isFinite)) {
+      W.push(w); Obj.push(fx[0])
+    } else{ break; }
+  }
+  return [Obj, W]
+}
 
 function runMomentum(f, w0, alpha, beta, lambda, totalIters) {
   console.log(alpha, beta, lambda)
