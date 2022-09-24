@@ -136,7 +136,7 @@ function genIterDiagramb(f, xstar, axis) {
             state_beta  = beta
 
             // Generate iterates
-            var OW = runMomentum(f, w0, alpha, beta, totalIters)
+            var OW = runMomentumb(f, w0, alpha, beta, totalIters)
             var W = OW[1]
 
             update2D(W)
