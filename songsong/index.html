@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.66.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/skeleton.css">
+<link rel="stylesheet" href="css/custom.css">
+<title>SongSong: A Time Phonograph for Chinese SongCi Music from Thousand of Years Away</title>
+</head>
+<body>
+
+<div class="container">
+
+	<header role="banner">
+				
+	</header>
+
+
+	<main role="main">
+        <h2>SongSong: A Time Phonograph for Chinese SongCi Music from Thousand of Years Away</h2>
+        <br>
+        <p>  
+            Jiliang Hu<sup>1,†</sup>, Jiajia Li<sup>3,†</sup>, Ziyi Pan<sup>1</sup>, Chong Chen<sup>4</sup>, Zuchao Li<sup>2,*</sup>, Ping Wang<sup>3,*</sup>,
+            Lefei Zhang<sup>2</sup>
+        </p>  
+        <p ><sup>1</sup>Key Laboratory of Aerospace Information Security and Trusted Computing, Ministry of Education, School of Cyber Science and Engineering, Wuhan University, Wuhan, China,</p>  
+        <p ><sup>2</sup>School of Computer Science, Wuhan University, Wuhan, China,</p>  
+        <p ><sup>3</sup>School of Information Management, Wuhan University, Wuhan, China,</p>
+        <p ><sup>4</sup>ShenYang Conservatory Of Music, ShenYang, China.</p>  
+
+<h2 id="abstract">Abstract</h2>
+<p>Recently, there have been significant advancements in music generation. However, existing models primarily focus on creating modern pop songs, making it challenging to produce ancient music with distinct rhythms and styles, such as ancient Chinese SongCi. In this paper, we introduce SongSong, the first music generation model capable of restoring Chinese SongCi to our knowledge. Our model first predicts the melody from the input SongCi, then separately generates the singing voice and accompaniment based on that melody, and finally combines all elements to create the final piece of music. Additionally, to address the lack of ancient music datasets, we create OpenSongSong, a comprehensive dataset of ancient Chinese SongCi music, featuring 29.9 hours of compositions by various renowned SongCi music masters. To assess SongSong's proficiency in performing SongCi, we randomly select 85 SongCi sentences that were not part of the training set for evaluation against SongSong and music generation platforms such as Suno and SkyMusic. The subjective and objective outcomes indicate that our proposed model achieves leading performance in generating high-quality SongCi music.</p>
+<h2 id="overview">Overview</h2>
+<img src="resources/framework.jpg">
+
+<h2 id="generated-samples">Samples</h2>
+<blockquote>
+    <h3>水调歌头（苏轼）[上阕]</h3>
+    <blockquote>
+        <div id="SongCi">
+            明月几时有？把酒问青天。
+        </div><br>
+        <div id="SongCi">
+            不知天上宫阙，今夕是何年。
+        </div><br>
+        <div id="SongCi">
+            我欲乘风归去，又恐琼楼玉宇，高处不胜寒。
+        </div><br>
+        <div id="SongCi">
+            起舞弄清影，何似在人间。
+        </div><br>
+        <br>
+        <figcaption>English translation:</figcaption>
+        <br>
+        <div id="EnglishTranslation">
+            When will there be a bright moon like the Mid Autumn Festival? I held a wine glass and asked the heavens from afar. I don't know what day it is now in the palace in the sky. I want to go back to the sky with the wind to take a look, but I'm worried that the building made of beautiful jade is too high and I can't withstand the cold. Getting up and dancing, enjoying the clear shadow of oneself under the moonlight, the moon palace cannot compare to the warmth of human fireworks.
+        </div>
+        <br>
+        <br>
+        <figcaption>female voice:</figcaption>
+        <br>
+        <audio controls>
+            <source src="resources/水调歌头.wav" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </blockquote>
+</blockquote>
+
+<blockquote>
+    <h3>鬲溪梅令·丙辰冬自无锡归作此寓意（姜夔）</h3>
+    <blockquote>
+        <div id="SongCi">
+            好花不与殢香人，浪粼粼。
+        </div><br>
+        <div id="SongCi">
+            又恐春风归去绿成阴，玉钿何处寻。
+        </div><br>
+        <div id="SongCi">
+            木兰双桨梦中云，小横陈。
+        </div><br>
+        <div id="SongCi">
+            漫向孤山山下觅盈盈，翠禽啼一春。
+        </div><br>
+        <br>
+        <figcaption>English translation:</figcaption>
+        <br>
+        <div id="EnglishTranslation">
+            Plum blossoms do not allow me, who cherishes flowers, to fully appreciate them. The fine waves blown by the gentle breeze sent me away again. I'm afraid that when I go there, spring has already passed, and the green leaves on the branches are shaded. The long and delicate spring flowers like mother of pearl will never be seen again.
+            <br>
+            The magnificent oars gently rowed, and a small cloud appeared in my dream, dragging horizontally. It's as if I've reached the foot of the Lonely Mountain, searching everywhere for the blooming flowers. However, I only saw a small bird with green feathers chirping sorrowfully in the spring scenery.
+        </div>
+        <br>
+        <br>
+        <figcaption>female voice:</figcaption>
+        <br>
+        <audio controls>
+            <source src="resources/鬲溪梅令.wav" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </blockquote>
+</blockquote>
+
+<blockquote>
+    <h3>翠楼吟·淳熙丙午冬（姜夔）[上阕]</h3>
+    <blockquote>
+        <div id="SongCi">
+            月冷龙沙，尘清虎落，今年汉酺初赐。
+        </div><br>
+        <div id="SongCi">
+            新翻胡部曲，听毡幕元戎歌吹。层楼高峙。
+        </div><br>
+        <div id="SongCi">
+            看槛曲萦红，檐牙飞翠。
+        </div><br>
+        <div id="SongCi">
+            人姝丽，粉香吹下，夜寒风细。
+        </div><br>
+        <br>
+        <figcaption>English translation:</figcaption>
+        <br>
+        <div id="EnglishTranslation">
+            The cold light of the bright moon reflects the sandstorms on the border, and the bamboo fences surrounding the city remain silent. This year, the court began to reward the people with drinking and gatherings. Playing the Northern Song, hearing the Marshal's military tent singing clear and melodious. The Anyuan Tower stands tall into the clouds, with its red railings surrounding the eaves, displaying a lush green sky. That beautiful woman is enchanting, with a faint fragrance wafting from her body, gently blown by the wind on a cold night.
+        </div>
+        <br>
+        <br>
+        <figcaption>male voice:</figcaption>
+        <br>
+        <audio controls>
+            <source src="resources/翠楼吟.wav" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </blockquote>
+</blockquote>
+
+<blockquote>
+    <h3>惜红衣·簟枕邀凉（姜夔）[上阕]</h3>
+    <blockquote>
+        <div id="SongCi">
+            簟枕邀凉，琴书换日，睡余无力。
+        </div><br>
+        <div id="SongCi">
+            细洒冰泉，并刀破甘碧。
+        </div><br>
+        <div id="SongCi">
+            墙头唤酒，谁问讯、城南诗客。
+        </div><br>
+        <div id="SongCi">
+            岑寂，高柳晚蝉，说西风消息。
+        </div><br>
+        <br>
+        <figcaption>English translation:</figcaption>
+        <br>
+        <div id="EnglishTranslation">
+            I cool off on the bamboo pillow every day, play the qin and read books to pass the time. Even when I wake up, I feel tired and powerless. Thoroughly clean with spring water and use a sharp knife to cut and chop the fresh and sweet fruits. I carefully arrange my life every day, but I am more lonely than Du Fu, unable to retrieve wine from behind the wall. Who would come to greet me? I am not the poet from the south of the city. My home is lonely and desolate, the west wind is slightly cold, the fallen willow trees, and the mournful cicadas are all telling me that autumn has arrived.
+        </div>
+        <br>
+        <br>
+        <figcaption>male voice:</figcaption>
+        <br>
+        <audio controls>
+            <source src="resources/惜红衣.wav" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </blockquote>
+</blockquote>
+
+<blockquote>
+    <h3>徵招（姜夔）[上阕]</h3>
+    <blockquote>
+        <div id="SongCi">
+            潮回却过西陵浦，扁舟仅容居士。
+        </div><br>
+        <div id="SongCi">
+            去得几何时，黍离离如此。客途今倦矣。
+        </div><br>
+        <div id="SongCi">
+            漫赢得、一襟诗思。
+        </div><br>
+        <div id="SongCi">
+            记忆江南，落帆沙际，此行还是。
+        </div><br>
+        <br>
+        <figcaption>English translation:</figcaption>
+        <br>
+        <div id="EnglishTranslation">
+            When the tide returned, I crossed the Xiling Ferry. A small boat can only accommodate one person to live in. I only went to Shanzhong for a few days this time, but when I returned, I found the scenery desolate and my homesickness very bitter. I am tired of the life of traveling to a foreign land, with only poetic emotions left to confide in. Recalling those years of traveling to Jiangnan, I also returned to the sandy shore, which sparked such poetic enthusiasm.
+        </div>
+        <br>
+        <br>
+        <figcaption>male voice:</figcaption>
+        <br>
+        <audio controls>
+            <source src="resources/徵招.wav" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </blockquote>
+</blockquote>
+
+</main>	
+
+</div>
+
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-139981676-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+<script type="text/x-mathjax-config">
+     MathJax.Hub.Config({
+         HTML: ["input/TeX","output/HTML-CSS"],
+         TeX: {
+                Macros: {
+                         bm: ["\\boldsymbol{#1}", 1],
+                         argmax: ["\\mathop{\\rm arg\\,max}\\limits"],
+                         argmin: ["\\mathop{\\rm arg\\,min}\\limits"]},
+                extensions: ["AMSmath.js","AMSsymbols.js"],
+                equationNumbers: { autoNumber: "AMS" } },
+         extensions: ["tex2jax.js"],
+         jax: ["input/TeX","output/HTML-CSS"],
+         tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                    processEscapes: true },
+         "HTML-CSS": { availableFonts: ["TeX"],
+                       linebreaks: { automatic: true } }
+     });
+ </script>
+
+ <script type="text/x-mathjax-config">
+     MathJax.Hub.Config({
+       tex2jax: {
+         skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+       }
+     });
+ </script>
+
+ <script type="text/javascript" async
+   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+ </script>
+
+
+
+
+</body>
+</html>
+
