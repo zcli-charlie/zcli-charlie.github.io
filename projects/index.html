@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects — Zuchao Li</title>
+    <meta name="description" content="Projects of Zuchao Li (Charlie)">
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-grid">
+        <div class="avatar">
+          <img src="../assets/images/lizuchao.jpg" alt="Photo of Zuchao Li" />
+        </div>
+        <div class="intro">
+          <h1>Projects</h1>
+          <p class="meta">Research projects and demos</p>
+        </div>
+      </div>
+    </header>
+    <nav class="site-nav">
+      <div class="container nav-inner">
+        <a href="../index.html">Home</a>
+        <a href="../publications/index.html">Publications</a>
+        <a href="../projects/index.html" class="active">Projects</a>
+        <a href="../news/index.html">News</a>
+        <a href="../teaching/index.html">Teaching</a>
+        <a href="../funding/index.html">Funding</a>
+        <a href="../talks/index.html">Talks</a>
+      </div>
+    </nav>
+
+    <main class="container">
+      <section class="section">
+        <h2>All Projects</h2>
+        <ul class="projects-grid">
+          <li class="project-card">
+            <a class="project-link" href="on-device-llms/index.html">
+              <img src="../assets/images/project-placeholder.svg" alt="On-device Large Models" loading="lazy" />
+              <div class="project-body">
+                <h3 class="project-title">On-device Large Models</h3>
+                <p class="project-desc">Deploying foundation models on edge devices via quantization, distillation, structured sparsity, and system co-design for efficient memory/latency.</p>
+                <div class="project-meta">
+                  <span class="badge">Ongoing</span>
+                  <span class="tag">On-device</span>
+                  <span class="tag">Quantization</span>
+                  <span class="tag">Distillation</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="project-card">
+            <a class="project-link" href="model-training-optimization/index.html">
+              <img src="../assets/images/project-placeholder.svg" alt="Model Training and Optimization" loading="lazy" />
+              <div class="project-body">
+                <h3 class="project-title">Model Training Optimization</h3>
+                <p class="project-desc">General-purpose optimization for deep models and LLMs. </p>
+                <div class="project-meta">
+                  <span class="badge">Ongoing</span>
+                  <span class="tag">Optimization</span>
+                  <span class="tag">LLMs</span>
+                  <span class="tag">Efficiency</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="project-card">
+            <a class="project-link" href="model-inference-optimization/index.html">
+              <img src="../assets/images/project-placeholder.svg" alt="Model Inference Optimization" loading="lazy" />
+              <div class="project-body">
+                <h3 class="project-title">Model Inference Optimization</h3>
+                <p class="project-desc">Efficient LLM inference via KV cache reduction, prompt compression, streaming retention, and token-efficient decoding.</p>
+                <div class="project-meta">
+                  <span class="badge">Ongoing</span>
+                  <span class="tag">Inference</span>
+                  <span class="tag">LLMs</span>
+                  <span class="tag">Efficiency</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="project-card">
+            <a class="project-link" href="document-intelligence/index.html">
+              <img src="../assets/images/project-placeholder.svg" alt="Document Recognition and Document Intelligence" loading="lazy" />
+              <div class="project-body">
+                <h3 class="project-title">Document Recognition and Intelligence</h3>
+                <p class="project-desc">Layout analysis, structure understanding, and intelligent document systems across scanned and born-digital documents.</p>
+                <div class="project-meta">
+                  <span class="badge">Ongoing</span>
+                  <span class="tag">Document AI</span>
+                  <span class="tag">Layout</span>
+                  <span class="tag">Vision+Language</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="project-card">
+            <a class="project-link" href="llm-structure-parsing/index.html">
+              <img src="../assets/images/project-placeholder.svg" alt="Language Structure Parsing in the LLM Era" loading="lazy" />
+              <div class="project-body">
+                <h3 class="project-title">Language Structure Parsing in the LLM Era</h3>
+                <p class="project-desc">Syntactic and semantic structure induction with and for LLMs: in-context parsing, alignment, and robust structured reasoning.</p>
+                <div class="project-meta">
+                  <span class="badge">Ongoing</span>
+                  <span class="tag">Parsing</span>
+                  <span class="tag">LLMs</span>
+                  <span class="tag">Structure</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <!-- Add more project cards below following the same structure -->
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        © <span id="year"></span> Zuchao Li. Built with static HTML/CSS. Hosted on GitHub Pages.
+      </div>
+    </footer>
+
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+  </html>
+

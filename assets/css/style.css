@@ -1,0 +1,256 @@
+/*
+  Minimal, readable, responsive styles for an academic homepage
+  Type: Inter (UI), Merriweather (headings)
+*/
+
+:root {
+  --bg: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #0f766e;
+  --link: #0ea5e9;
+  --border: #e5e7eb;
+  --card: #f9fafb;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.65;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+}
+
+.site-header {
+  background: linear-gradient(180deg, #f8fafc, #ffffff);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-nav {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border);
+}
+.site-nav .nav-inner {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  padding: 10px 0;
+}
+.site-nav a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+.site-nav a:hover { background: var(--card); }
+.site-nav a.active { color: var(--primary); font-weight: 600; }
+
+.header-grid {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 24px;
+  padding: 32px 0;
+  align-items: center;
+}
+
+.avatar img {
+  width: 180px;
+  height: 220px;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 2px solid var(--border);
+}
+
+.intro h1 {
+  margin: 0 0 8px 0;
+  font-family: Merriweather, Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.intro .native { font-weight: 600; color: var(--muted); margin-left: 8px; }
+.intro .role { margin: 6px 0 8px; color: var(--primary); font-weight: 600; }
+.intro .meta { color: var(--muted); margin: 0 0 8px; }
+.intro .links { color: var(--muted); }
+.intro .sep { margin: 0 8px; color: var(--border); }
+
+h2 {
+  font-family: Merriweather, Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+}
+
+.section { padding: 28px 0; border-bottom: 1px solid var(--border); }
+.section:last-child { border-bottom: none; }
+
+.callout {
+  margin-top: 12px;
+  padding: 12px 14px;
+  background: #fff7ed;
+  border: 1px solid #ffedd5;
+  border-radius: 8px;
+}
+
+.compact { margin: 8px 0 0 18px; }
+.compact li { margin: 4px 0; }
+
+.pub-year {
+  margin: 18px 0 6px;
+  padding: 2px 10px;
+  display: inline-block;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: #0b3b3b;
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+.pub-list { margin: 8px 0 0 18px; }
+.pub { margin: 0 0 12px; }
+.pub .title { font-weight: 600; }
+.pub .links { margin-left: 8px; font-size: 0.95em; color: var(--muted); }
+.pub .authors { color: var(--muted); }
+.pub .venue { color: var(--primary); font-weight: 600; }
+.legend { color: var(--muted); }
+
+/* Funding list */
+.funding-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+.funding-item { border: 1px solid var(--border); border-radius: 10px; background: #fff; padding: 12px; display: grid; grid-template-columns: 240px 1fr auto; gap: 14px; align-items: center; }
+.funding-media { width: 100%; height: 100%; }
+.funding-media img { width: 100%; height: 100%; max-height: 140px; object-fit: cover; border-radius: 8px; background: #f3f4f6; display: block; }
+.funding-content { display: flex; flex-direction: column; justify-content: center; }
+.funding-title { font-weight: 600; }
+.funding-meta { color: var(--muted); }
+.funding-program { color: var(--text); font-weight: 500; }
+.funding-badge { background: var(--card); border: 1px solid var(--border); border-radius: 999px; padding: 2px 10px; font-size: 12px; }
+
+.funding-row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-top: 6px; }
+.type-badge { background: #eef2ff; color: #3730a3; border: 1px solid #e0e7ff; border-radius: 999px; padding: 2px 8px; font-size: 12px; }
+.role-badge { background: #ecfdf5; color: #065f46; border: 1px solid #d1fae5; border-radius: 999px; padding: 2px 8px; font-size: 12px; }
+.role-badge.pi { background: #dcfce7; color: #14532d; border-color: #bbf7d0; }
+.role-badge.co { background: #f0fdf4; color: #166534; border-color: #dcfce7; }
+.role-badge.part { background: #e0f2fe; color: #075985; border-color: #bae6fd; }
+.amount-badge { background: #fff7ed; color: #9a3412; border: 1px solid #ffedd5; border-radius: 999px; padding: 2px 8px; font-size: 12px; }
+.grantno-badge { background: #f0f9ff; color: #075985; border: 1px solid #bae6fd; border-radius: 999px; padding: 2px 8px; font-size: 12px; }
+.funding-links { margin-top: 6px; }
+.funding-links a { color: var(--link); text-decoration: none; margin-right: 10px; }
+.funding-links a:hover { text-decoration: underline; }
+
+@media (max-width: 860px) {
+  .funding-item { grid-template-columns: 1fr; }
+  .funding-media img { height: 180px; max-height: none; }
+  .funding-badge { justify-self: start; }
+}
+
+/* Project/funding hero image */
+.project-hero {
+  margin: 16px 0 10px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+}
+.project-hero img {
+  width: 100%;
+  display: block;
+  background: #f3f4f6;
+}
+.project-hero .legend {
+  padding: 8px 10px;
+}
+
+.pub-controls { margin-top: 6px; }
+.pub-details-toggle {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  color: var(--text);
+  font: inherit;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.pub-details-toggle:hover { background: var(--card); }
+
+.pub-details {
+  margin-top: 10px;
+  padding: 12px 14px;
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.pub-details h1, .pub-details h2, .pub-details h3 { margin: 8px 0; }
+.pub-details p { margin: 8px 0; }
+.pub-loading { color: var(--muted); }
+.pub-error { color: #b91c1c; }
+.pub-details pre { background: #0b1020; color: #e5e7eb; padding: 10px; border-radius: 6px; overflow: auto; }
+.pub-details code { background: #f3f4f6; padding: 1px 4px; border-radius: 4px; }
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.columns {
+  columns: 2 320px;
+  column-gap: 18px;
+  padding-left: 18px;
+}
+.columns li { break-inside: avoid; margin: 4px 0; }
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 18px 0 40px;
+  color: var(--muted);
+}
+
+@media (max-width: 720px) {
+  .header-grid {
+    grid-template-columns: 110px 1fr;
+    gap: 16px;
+  }
+  .avatar img { width: 110px; height: 110px; border-radius: 12px; }
+  .two-col { grid-template-columns: 1fr; }
+  .container { width: min(100%, 92vw); }
+}
+
+/* Projects grid */
+.projects-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr; /* one card per row */
+  gap: 18px;
+}
+.project-card { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: #fff; }
+.project-link { display: grid; grid-template-columns: 360px 1fr; gap: 16px; color: inherit; text-decoration: none; align-items: stretch; }
+.project-media { position: relative; width: 100%; height: 100%; }
+.project-link img { width: 100%; height: 100%; max-height: 240px; object-fit: cover; display: block; background: #f3f4f6; }
+.media-badge { position: absolute; left: 10px; top: 10px; background: rgba(15, 118, 110, 0.92); color: #fff; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+.project-body { padding: 12px; display: flex; flex-direction: column; justify-content: center; }
+.project-title { margin: 0 0 6px 0; font-size: 1.05rem; }
+.project-desc { margin: 0 0 8px 0; color: var(--muted); }
+.project-meta { display: flex; flex-wrap: wrap; gap: 6px; }
+.badge { background: var(--card); border: 1px solid var(--border); border-radius: 999px; padding: 2px 8px; font-size: 12px; }
+.badge-oral { background: #f97316; color: #ffffff; border: 1px solid #f97316; font-weight: 700; }
+.tag { background: #eef2ff; color: #3730a3; border: 1px solid #e0e7ff; border-radius: 999px; padding: 2px 8px; font-size: 12px; }
+
+@media (max-width: 900px) {
+  .project-link { grid-template-columns: 1fr; }
+  .project-link img { height: 220px; max-height: none; }
+}
+/* Single-column grid remains; each card uses horizontal split on wide screens */
+

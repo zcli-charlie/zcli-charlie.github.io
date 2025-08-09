@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>News — Zuchao Li</title>
+    <meta name="description" content="News and updates of Zuchao Li (Charlie)">
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-grid">
+        <div class="avatar">
+          <img src="../assets/images/lizuchao.jpg" alt="Photo of Zuchao Li" />
+        </div>
+        <div class="intro">
+          <h1>News</h1>
+          <p class="meta">Latest updates</p>
+        </div>
+      </div>
+    </header>
+    <nav class="site-nav">
+      <div class="container nav-inner">
+        <a href="../index.html">Home</a>
+        <a href="../publications/index.html">Publications</a>
+        <a href="../projects/index.html">Projects</a>
+        <a href="../news/index.html" class="active">News</a>
+        <a href="../teaching/index.html">Teaching</a>
+        <a href="../funding/index.html">Funding</a>
+        <a href="../talks/index.html">Talks</a>
+      </div>
+    </nav>
+
+    <main class="container">
+      <section class="section">
+        <h2>Latest</h2>
+        <ul class="projects-grid">
+          <li class="project-card">
+            <a class="project-link" href="sirllm-acl2024.html">
+              <img src="../assets/images/project-placeholder.svg" alt="ACL 2024: SirLLM accepted" loading="lazy" />
+              <div class="project-body">
+                <h3 class="project-title">ACL 2024: SirLLM accepted</h3>
+                <p class="project-desc">Streaming Infinite Retentive LLM — long-context streaming with efficient state retention.</p>
+                <div class="project-meta">
+                  <span class="badge">2024-07-01</span>
+                  <span class="tag">ACL</span>
+                  <span class="tag">Streaming</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="project-card">
+            <a class="project-link" href="sift-icml2024.html">
+              <img src="../assets/images/project-placeholder.svg" alt="ICML 2024: SIFT accepted" loading="lazy" />
+              <div class="project-body">
+                <h3 class="project-title">ICML 2024: SIFT accepted</h3>
+                <p class="project-desc">Sparse is Enough in Fine-tuning Pre-trained Large Language Models — efficient sparse fine-tuning.</p>
+                <div class="project-meta">
+                  <span class="badge">2024-05-20</span>
+                  <span class="tag">ICML</span>
+                  <span class="tag">LLMs</span>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        © <span id="year"></span> Zuchao Li. Built with static HTML/CSS. Hosted on GitHub Pages.
+      </div>
+    </footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+  </html>
+

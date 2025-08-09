@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document Recognition and Document Intelligence — Zuchao Li</title>
+    <meta name="description" content="Project: Document Recognition and Document Intelligence">
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-grid">
+        <div class="avatar">
+          <img src="../../lizuchao.jpg" alt="Photo of Zuchao Li" />
+        </div>
+        <div class="intro">
+          <h1>Document Recognition and Document Intelligence</h1>
+          <p class="meta">Layout analysis, structure understanding, Vision-Language for documents</p>
+        </div>
+      </div>
+    </header>
+    <nav class="site-nav">
+      <div class="container nav-inner">
+        <a href="../../index.html">Home</a>
+        <a href="../index.html" class="active">Projects</a>
+      </div>
+    </nav>
+
+    <main class="container">
+      <section class="section">
+        <h2>Overview</h2>
+        <p>
+          We study document understanding across scanned and born-digital content, covering layout parsing, entity linking, table/chart
+          understanding, and robust reasoning with multimodal cues.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Outcomes</h2>
+        <ul class="projects-grid">
+          <li class="project-card">
+            <a class="project-link" href="https://github.com/Line-Kite/GraphLayoutLM" target="_blank" rel="noopener">
+              <img src="../../assets/images/project-placeholder.svg" alt="GraphLayoutLM" loading="lazy" />
+              <div class="project-body">
+                <h3 class="project-title">GraphLayoutLM</h3>
+                <p class="project-desc">Enhancing visually-rich document understanding via layout structure modeling. MM 2023.</p>
+                <div class="project-meta">
+                  <span class="badge">2023</span>
+                  <span class="tag">Document AI</span>
+                  <span class="tag">Graph</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="project-card">
+            <a class="project-link" href="#">
+              <img src="../../assets/images/project-placeholder.svg" alt="Hypergraph for Document Entity Recognition" loading="lazy" />
+              <div class="project-body">
+                <h3 class="project-title">Hypergraph for Document Entity Recognition</h3>
+                <p class="project-desc">Hypergraph-based understanding for document semantic entity recognition. ACL 2024.</p>
+                <div class="project-meta">
+                  <span class="badge">2024</span>
+                  <span class="tag">ACL</span>
+                  <span class="tag">Hypergraph</span>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        © <span id="year"></span> Zuchao Li. Built with static HTML/CSS. Hosted on GitHub Pages.
+      </div>
+    </footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+  </html>
+

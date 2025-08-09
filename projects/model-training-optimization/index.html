@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Model Training and Optimization — Zuchao Li</title>
+    <meta name="description" content="Project: Model Training and Optimization">
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-grid">
+        <div class="avatar">
+          <img src="../../lizuchao.jpg" alt="Photo of Zuchao Li" />
+        </div>
+        <div class="intro">
+          <h1>Model Training and Optimization</h1>
+          <p class="meta">General-purpose optimization for deep models and LLMs</p>
+        </div>
+      </div>
+    </header>
+    <nav class="site-nav">
+      <div class="container nav-inner">
+        <a href="../../index.html">Home</a>
+        <a href="../index.html" class="active">Projects</a>
+      </div>
+    </nav>
+
+    <main class="container">
+      <section class="section">
+        <h2>Overview</h2>
+        <p>
+          We study optimization methods for efficient training and adaptation of deep models and large language models (LLMs),
+          aiming at better convergence, stability, and compute efficiency.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Outcomes</h2>
+        <ul class="projects-grid">
+          <li class="project-card">
+            <a class="project-link" href="../admeta/index.html">
+              <img src="../../assets/images/project-placeholder.svg" alt="Admeta Optimizer" loading="lazy" />
+              <div class="project-body">
+                <h3 class="project-title">Admeta Optimizer</h3>
+                <p class="project-desc">Bidirectional looking with double exponential moving average. ICML 2023.</p>
+                <div class="project-meta">
+                  <span class="badge">2023</span>
+                  <span class="tag">ICML</span>
+                  <span class="tag">Optimizer</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="project-card">
+            <a class="project-link" href="https://github.com/song-wx/SIFT" target="_blank" rel="noopener">
+              <img src="../../assets/images/project-placeholder.svg" alt="SIFT: Sparse Fine-tuning for LLMs" loading="lazy" />
+              <div class="project-body">
+                <h3 class="project-title">SIFT: Sparse Fine-tuning for LLMs</h3>
+                <p class="project-desc">Sparse is Enough in Fine-tuning Pre-trained Large Language Models. ICML 2024.</p>
+                <div class="project-meta">
+                  <span class="badge">2024</span>
+                  <span class="tag">ICML</span>
+                  <span class="tag">LLMs</span>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Publications</h2>
+        <ul class="compact">
+          <li>Yineng Chen, <strong>Zuchao Li*</strong>, et al. Bidirectional Looking with A Novel Double Exponential Moving Average... ICML 2023.</li>
+          <li>Weixi Song, <strong>Zuchao Li*</strong>, et al. Sparse is Enough in Fine-tuning Pre-trained Large Language Models. ICML 2024.</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        © <span id="year"></span> Zuchao Li. Built with static HTML/CSS. Hosted on GitHub Pages.
+      </div>
+    </footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+  </html>
+

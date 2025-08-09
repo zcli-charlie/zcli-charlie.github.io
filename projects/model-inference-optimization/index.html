@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Model Inference Optimization — Zuchao Li</title>
+    <meta name="description" content="Project: Model Inference Optimization">
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-grid">
+        <div class="avatar">
+          <img src="../../lizuchao.jpg" alt="Photo of Zuchao Li" />
+        </div>
+        <div class="intro">
+          <h1>Model Inference Optimization</h1>
+          <p class="meta">KV cache reduction, prompt compression, streaming retention, and token-efficient decoding</p>
+        </div>
+      </div>
+    </header>
+    <nav class="site-nav">
+      <div class="container nav-inner">
+        <a href="../../index.html">Home</a>
+        <a href="../index.html" class="active">Projects</a>
+      </div>
+    </nav>
+
+    <main class="container">
+      <section class="section">
+        <h2>Overview</h2>
+        <p>
+          We develop efficient inference techniques for large language models, focusing on reducing memory and latency while preserving quality.
+          Directions include KV cache pruning/merging, prompt compression, streaming state retention, and adaptive decoding.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Outcomes</h2>
+        <ul class="projects-grid">
+          <li class="project-card">
+            <a class="project-link" href="https://github.com/Zoeyyao27/SirLLM" target="_blank" rel="noopener">
+              <img src="../../assets/images/project-placeholder.svg" alt="SirLLM" loading="lazy" />
+              <div class="project-body">
+                <h3 class="project-title">SirLLM</h3>
+                <p class="project-desc">Streaming Infinite Retentive LLM. ACL 2024.</p>
+                <div class="project-meta">
+                  <span class="badge">2024</span>
+                  <span class="tag">ACL</span>
+                  <span class="tag">Streaming</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="project-card">
+            <a class="project-link" href="#">
+              <img src="../../assets/images/project-placeholder.svg" alt="Prompt Compression" loading="lazy" />
+              <div class="project-body">
+                <h3 class="project-title">Prompt Compression</h3>
+                <p class="project-desc">Compact representations for long-context prompting with minimal quality loss.</p>
+                <div class="project-meta">
+                  <span class="badge">Ongoing</span>
+                  <span class="tag">Compression</span>
+                  <span class="tag">Long-Context</span>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        © <span id="year"></span> Zuchao Li. Built with static HTML/CSS. Hosted on GitHub Pages.
+      </div>
+    </footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+  </html>
+

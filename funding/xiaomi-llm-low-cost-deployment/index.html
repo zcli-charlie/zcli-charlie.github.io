@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Low-cost LLM Deployment — Xiaomi Open-Competition Research Program</title>
+    <meta name="description" content="Low-cost deployment algorithms for large language models (2024–2025)">
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-grid">
+        <div class="avatar">
+          <img src="../../assets/images/lizuchao.jpg" alt="Photo of Zuchao Li" />
+        </div>
+        <div class="intro">
+          <h1>Low-cost LLM Deployment</h1>
+          <p class="meta">Xiaomi Open-Competition Research Program — 2024–2025</p>
+        </div>
+      </div>
+    </header>
+    <nav class="site-nav">
+      <div class="container nav-inner">
+        <a href="../../index.html">Home</a>
+        <a href="../index.html" class="active">Projects</a>
+      </div>
+    </nav>
+
+    <main class="container">
+      <div class="project-hero">
+        <img src="../../assets/images/project-placeholder.svg" alt="Low-cost LLM Deployment — overview" />
+        <div class="legend">Illustration of low-cost deployment pipeline (quantization, distillation, KV cache, runtime co-design).</div>
+      </div>
+      <section class="section">
+        <h2>Overview</h2>
+        <p>
+          This project targets cost-efficient deployment of large language models across edge and consumer devices.
+          We study quantization, distillation, structured sparsity, KV cache strategies, prompt compression, and runtime co-design
+          to reduce memory and latency under real-world constraints.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Technical Tracks</h2>
+        <ul class="projects-grid">
+          <li class="project-card">
+            <a class="project-link" href="#">
+              <img src="../../assets/images/project-placeholder.svg" alt="Quantization and Distillation" loading="lazy" />
+              <div class="project-body">
+                <h3 class="project-title">Quantization and Distillation</h3>
+                <p class="project-desc">Lower precision kernels and student models tailored for target devices.</p>
+                <div class="project-meta">
+                  <span class="badge">2024–2025</span>
+                  <span class="tag">On-device</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="project-card">
+            <a class="project-link" href="#">
+              <img src="../../assets/images/project-placeholder.svg" alt="KV Cache and Prompt Compression" loading="lazy" />
+              <div class="project-body">
+                <h3 class="project-title">KV Cache and Prompt Compression</h3>
+                <p class="project-desc">Memory-aware KV strategies and compact prompts for long-context usage.</p>
+                <div class="project-meta">
+                  <span class="badge">2024–2025</span>
+                  <span class="tag">Efficiency</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="project-card">
+            <a class="project-link" href="#">
+              <img src="../../assets/images/project-placeholder.svg" alt="Runtime Co-design" loading="lazy" />
+              <div class="project-body">
+                <h3 class="project-title">Runtime Co-design</h3>
+                <p class="project-desc">Scheduling, caching, and memory-aware batching for device-specific runtimes.</p>
+                <div class="project-meta">
+                  <span class="badge">2024–2025</span>
+                  <span class="tag">Systems</span>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Outputs</h2>
+        <ul class="compact">
+          <li>Targeting technical reports, open-source toolkits, and deployment case studies.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">© <span id="year"></span> Zuchao Li.</div>
+    </footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+  </html>
+

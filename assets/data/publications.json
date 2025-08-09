@@ -1,0 +1,390 @@
+{
+  "years": [
+    {
+      "year": 2024,
+      "items": [
+        {
+          "title": "SirLLM: Streaming Infinite Retentive LLM",
+          "pdf": null,
+          "code": "https://github.com/Zoeyyao27/SirLLM",
+          "authors": "Yao Yao, Zuchao Li*, and Hai Zhao*",
+          "venue": "ACL 2024"
+        },
+        {
+          "title": "Hypergraph based Understanding for Document Semantic Entity Recognition",
+          "pdf": null,
+          "code": null,
+          "authors": "Qiwei Li, Zuchao Li*, Ping Wang, Haojun Ai and Hai Zhao",
+          "venue": "ACL 2024"
+        },
+        {
+          "title": "Selective Prefix Tuning for Pre-trained Language Models",
+          "pdf": null,
+          "code": null,
+          "authors": "Hongyi Zhang, Zuchao Li*, Ping Wang, and Hai Zhao",
+          "venue": "ACL-Findings 2024"
+        },
+        {
+          "title": "The Music Maestro or The Musically Challenged, A Massive Music Evaluation Benchmark for Large Language Models",
+          "pdf": null,
+          "code": null,
+          "authors": "Jiajia Li, Lu Yang, Mingni Tang, Chong Chen, Zuchao Li*, Ping Wang*, and Hai Zhao",
+          "venue": "ACL-Findings 2024"
+        },
+        {
+          "title": "GKT: A Novel Guidance-Based Knowledge Transfer Framework For Efficient Cloud-edge Collaboration LLM Deployment",
+          "pdf": null,
+          "code": null,
+          "authors": "Yao Yao, Zuchao Li*, and Hai Zhao*",
+          "venue": "ACL-Findings 2024"
+        },
+        {
+          "title": "GoT: Effective Graph-of-Thought Reasoning in Language Models",
+          "pdf": "https://arxiv.org/abs/2305.16582",
+          "code": "https://github.com/Zoeyyao27/Graph-of-Thought",
+          "authors": "Yao Yao, Zuchao Li*, and Hai Zhao*",
+          "venue": "NAACL-Findings 2024"
+        },
+        {
+          "title": "Sparse is Enough in Fine-tuning Pre-trained Large Language Models",
+          "pdf": "https://arxiv.org/abs/2312.11875",
+          "code": "https://github.com/song-wx/SIFT",
+          "authors": "Weixi Song, Zuchao Li*, Lefei Zhang, Hai Zhao and Bo Du",
+          "venue": "ICML 2024"
+        },
+        {
+          "title": "Soft-Prompting with Graph-of-Thought for Multi-modal Representation Learning",
+          "pdf": "https://arxiv.org/pdf/2404.04538",
+          "code": "https://github.com/shishicode/AGoT",
+          "authors": "Juncheng Yang, Zuchao Li*, Shuai Xie, Wei Yu, Shijun Li*, Bo Du",
+          "venue": "LREC-COLING 2024"
+        },
+        {
+          "title": "A Novel Energy based Model Method for Multi-modal Aspect-Based Sentiment Analysis",
+          "pdf": "https://ojs.aaai.org/index.php/AAAI/article/view/29852",
+          "code": "https://github.com/pengts/DQPSA",
+          "authors": "Tianshuo Peng, Zuchao Li*, Ping Wang, Lefei Zhang, and Hai Zhao",
+          "venue": "AAAI 2024"
+        },
+        {
+          "title": "Multi-modal Latent Space Learning for Chain-of-Thought Reasoning in Language Models",
+          "pdf": "https://ojs.aaai.org/index.php/AAAI/article/view/29776",
+          "code": "https://github.com/shimurenhlq/DPMM-COT",
+          "authors": "Liqi He, Zuchao Li*, Xiantao Cai, and Ping Wang",
+          "venue": "AAAI 2024"
+        },
+        {
+          "title": "N-Gram Unsupervised Compoundation and Feature Injection for Better Symbolic Music Understanding",
+          "pdf": "https://ojs.aaai.org/index.php/AAAI/article/view/29461",
+          "code": "https://github.com/CinqueOrigin/NG-Midiformer",
+          "authors": "Jinhao Tian, Zuchao Li*, Jiajia Li, and Ping Wang*",
+          "venue": "AAAI 2024"
+        }
+      ]
+    },
+    {
+      "year": 2023,
+      "items": [
+        {
+          "title": "Cross-lingual Universal Dependency Parsing Only From One Monolingual Treebank",
+          "pdf": null,
+          "code": null,
+          "authors": "Kailai Sun, Zuchao Li*, and Hai Zhao*",
+          "venue": "T-PAMI 2023"
+        },
+        {
+          "title": "FSUIE: A Novel Fuzzy Span Mechanism for Universal Information Extraction",
+          "pdf": "https://arxiv.org/abs/2306.14913",
+          "code": "https://github.com/pengts/FSUIE",
+          "authors": "Tianshuo Peng, Zuchao Li*, Lefei Zhang, Bo Du, and Hai Zhao",
+          "venue": "ACL 2023"
+        },
+        {
+          "title": "Learning Event-aware Measures for Event Coreference Resolution",
+          "pdf": "https://aclanthology.org/2023.findings-acl.855/",
+          "code": null,
+          "authors": "Yao Yao, Zuchao Li*, and Hai Zhao*",
+          "venue": "ACL-Findings 2023"
+        },
+        {
+          "title": "Contextualized Semantic Distance between Highly Overlapped Texts",
+          "pdf": "https://aclanthology.org/2023.findings-acl.694/",
+          "code": "https://github.com/Stareru/NeighboringDistributionDivergence/",
+          "authors": "Letian Peng, Zuchao Li*, and Hai Zhao*",
+          "venue": "ACL-Findings 2023"
+        },
+        {
+          "title": "Enhancing Ancient Chinese Understanding with Derived Noisy Syntax Trees",
+          "pdf": "https://aclanthology.org/2023.acl-srw.15/",
+          "code": null,
+          "authors": "Shitou Zhang, Ping Wang*, Zuchao Li*, and Jingrui Hou",
+          "venue": "ACL Workshop 2023"
+        },
+        {
+          "title": "Bidirectional Looking with A Novel Double Exponential Moving Average to Adaptive and Non-adaptive Momentum Optimizers",
+          "pdf": "https://proceedings.mlr.press/v202/chen23r.html",
+          "code": "https://github.com/Chernyn/Admeta-Optimizer",
+          "authors": "Yineng Chen, Zuchao Li*, Lefei Zhang, Bo Du, and Hai Zhao",
+          "venue": "ICML 2023"
+        },
+        {
+          "title": "Enhancing Visually-Rich Document Understanding via Layout Structure Modeling",
+          "pdf": "https://dl.acm.org/doi/abs/10.1145/3581783.3612327",
+          "code": "https://github.com/Line-Kite/GraphLayoutLM",
+          "authors": "Qiwei Li, Zuchao Li*, Xiantao Cai, Bo Du, and Hai Zhao",
+          "venue": "MM 2023"
+        },
+        {
+          "title": "MAPLE: Semi-Supervised Learning with Multi-Alignment and Pseudo-Learning",
+          "pdf": "https://dl.acm.org/doi/abs/10.1145/3580305.3599423",
+          "code": "https://github.com/shishicode/MAPLE",
+          "authors": "Juncheng Yang, Chao Li, Zuchao Li*, Wei Yu, Bo Du, and Shijun Li*",
+          "venue": "KDD 2023"
+        },
+        {
+          "title": "Fine-grained Position Helps Memorizing More, A Novel Music Compound Transformer Model with Feature Interaction Fusion",
+          "pdf": "https://ojs.aaai.org/index.php/AAAI/article/view/25650",
+          "code": "https://github.com/zcli-charlie/MIDI-FiF-RoAR",
+          "authors": "Zuchao Li, Ruhang Gong, Yineng Chen, and Kehua Su*",
+          "venue": "AAAI 2023"
+        },
+        {
+          "title": "iRe^2F: Rethinking Effective Refinement in Language Structure Prediction via Efficient Iterative Retrospecting and Reasoning",
+          "pdf": "https://www.ijcai.org/proceedings/2023/570",
+          "code": null,
+          "authors": "Zuchao Li, Xingyi Guo, Letian Peng, Lefei Zhang, and Hai Zhao*",
+          "venue": "IJCAI 2023"
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "items": [
+        {
+          "title": "What Works and Doesn't Work, A Deep Decoder for Neural Machine Translation",
+          "pdf": "https://aclanthology.org/2022.findings-acl.39/",
+          "code": null,
+          "authors": "Zuchao Li, Yiran Wang, Masao Utiyama, Eiichiro Sumita, Hai Zhao, and Taro Watanabe",
+          "venue": "ACL-Findings 2022"
+        },
+        {
+          "title": "Restricted or Not: A General Training Framework for Neural Machine Translation",
+          "pdf": "https://aclanthology.org/2022.acl-srw.18/",
+          "code": null,
+          "authors": "Zuchao Li, Masao Utiyama, Eiichiro Sumita, and Hai Zhao",
+          "venue": "ACL Workshop 2022"
+        },
+        {
+          "title": "Reorder and then Parse, Fast and Accurate Discontinuous Constituency Parsing",
+          "pdf": "https://aclanthology.org/2022.emnlp-main.723/",
+          "code": null,
+          "authors": "Kailai Sun, Zuchao Li*, Hai Zhao*",
+          "venue": "EMNLP 2022"
+        },
+        {
+          "title": "Nested Named Entity Recognition as Corpus Aware Holistic Structure Parsing",
+          "pdf": "https://aclanthology.org/2022.coling-1.218/",
+          "code": null,
+          "authors": "Yifei Yang#, Zuchao Li#, Hai Zhao",
+          "venue": "COLING 2022"
+        },
+        {
+          "title": "BiBL: AMR Parsing and Generation with Bidirectional Bayesian Learning",
+          "pdf": "https://aclanthology.org/2022.coling-1.485/",
+          "code": "https://github.com/KHAKhazeus/BiBL",
+          "authors": "Ziming Cheng, Zuchao Li* and Hai Zhao*",
+          "venue": "COLING 2022"
+        },
+        {
+          "title": "Explicit Alignment Learning for Neural Machine Translation",
+          "pdf": "https://www.ijcai.org/proceedings/2022/0587",
+          "code": null,
+          "authors": "Zuchao Li, Hai Zhao*, Fengshun Xiao, Masao Utiyama and Eiichiro Sumita",
+          "venue": "IJCAI 2022"
+        },
+        {
+          "title": "Incorporating Rich Syntax Information in Grammatical Error Correction",
+          "pdf": "https://dl.acm.org/doi/abs/10.1016/j.ipm.2022.102891",
+          "code": null,
+          "authors": "Zuchao Li, Kevin Parnow, Hai Zhao",
+          "venue": "IPM 2022"
+        },
+        {
+          "title": "Neural Character-level Syntactic Parsing for Chinese",
+          "pdf": "https://www.jair.org/index.php/jair/article/view/13052",
+          "code": null,
+          "authors": "Zuchao Li, Junru Zhou, Hai Zhao, Zhisong Zhang, Haonan Li, Yuqi Ju",
+          "venue": "JAIR 2022"
+        },
+        {
+          "title": "Dependency and Span, Cross-Style Semantic Role Labeling on PropBank and NomBank",
+          "pdf": "https://dl.acm.org/doi/abs/10.1145/3526214",
+          "code": null,
+          "authors": "Zuchao Li, Hai Zhao, Junru Zhou, Kevin Parnow, and Shexia He",
+          "venue": "TALLIP 2022"
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "items": [
+        {
+          "title": "Text Compression-aided Transformer Encoding",
+          "pdf": "https://ieeexplore.ieee.org/abstract/document/9354025/",
+          "code": null,
+          "authors": "Zuchao Li, Zhuosheng Zhang, Hai Zhao, Rui Wang, Kehai Chen, Masao Utiyama, Eiichiro Sumita",
+          "venue": "T-PAMI 2021"
+        },
+        {
+          "title": "Syntax Role for Neural Semantic Role Labeling",
+          "pdf": "https://arxiv.org/abs/2009.05737",
+          "code": null,
+          "authors": "Zuchao Li, Hai Zhao, Shexia He, Jiaxun Cai",
+          "venue": "CL 2021"
+        },
+        {
+          "title": "Grammatical Error Correction as GAN-like Sequence Labeling",
+          "pdf": "https://arxiv.org/abs/2105.14209",
+          "code": null,
+          "authors": "Kevin Parnow#, Zuchao Li#, Hai Zhao*",
+          "venue": "ACL-Findings 2021"
+        },
+        {
+          "title": "Multilingual Pre-training with Universal Dependency Learning",
+          "pdf": "https://proceedings.neurips.cc/paper_files/paper/2021/hash/473803f0f2ebd77d83ee60daaa61f381-Abstract.html",
+          "code": "https://github.com/KAI-SHU/UDPrLM",
+          "authors": "Kailai Sun*, Zuchao Li* and Hai Zhao",
+          "venue": "NeurIPS 2021"
+        },
+        {
+          "title": "Unsupervised Neural Machine Translation with Universal Grammar",
+          "pdf": "https://aclanthology.org/2021.emnlp-main.261/",
+          "code": null,
+          "authors": "Zuchao Li, Masao Utiyama, Eiichiro Sumita, Hai Zhao",
+          "venue": "EMNLP 2021"
+        },
+        {
+          "title": "HPSG-inspired Joint Neural Constituent and Dependency Parsing in O (n^3) Time Complexity",
+          "pdf": "https://ieeexplore.ieee.org/abstract/document/9664335",
+          "code": null,
+          "authors": "Zuchao Li, Junru Zhou, Hai Zhao, and Kevin Parnow",
+          "venue": "TASLP 2021"
+        },
+        {
+          "title": "Tri-training for Dependency Parsing Domain Adaptation",
+          "pdf": "https://dl.acm.org/doi/abs/10.1145/3488367",
+          "code": null,
+          "authors": "Shujiang#, Zuchao Li#, Hai Zhao*, Baoliang Lu, and Rui Wang",
+          "venue": "TALLIP 2021"
+        }
+      ]
+    },
+    {
+      "year": 2020,
+      "items": [
+        {
+          "title": "Data-dependent Gaussian Prior Objective for Language Generation",
+          "pdf": "https://openreview.net/forum?id=S1efxTVYDr",
+          "code": "https://github.com/bcmi220/d2gpo",
+          "authors": "Zuchao Li, Rui Wang, Kehai Chen, Masao Utiyama, Eiichiro Sumita, Zhuosheng Zhang, and Hai Zhao",
+          "venue": "ICLR 2020 (Long Talk)"
+        },
+        {
+          "title": "High-order Semantic Role Labeling",
+          "pdf": "https://arxiv.org/abs/2010.04641",
+          "code": "https://github.com/bcmi220/hosrl",
+          "authors": "Zuchao Li, Hai Zhao, Rui Wang, and Kevin Parnow",
+          "venue": "EMNLP-Findings 2020"
+        },
+        {
+          "title": "Reference Language based Unsupervised Neural Machine Translation",
+          "pdf": "https://arxiv.org/abs/2004.02127",
+          "code": "https://github.com/bcmi220/runmt",
+          "authors": "Zuchao Li, Hai Zhao, Rui Wang, Masao Utiyama and Eiichiro Sumita",
+          "venue": "EMNLP-Findings 2020"
+        },
+        {
+          "title": "Global Greedy Dependency Parsing",
+          "pdf": "https://ojs.aaai.org/index.php/AAAI/article/view/6348",
+          "code": "https://github.com/bcmi220/ggdp",
+          "authors": "Zuchao Li, Hai Zhao, Kevin Parnow",
+          "venue": "AAAI 2020"
+        },
+        {
+          "title": "Explicit Sentence Compression for Neural Machine Translation",
+          "pdf": "https://ojs.aaai.org/index.php/AAAI/article/view/6347",
+          "code": "https://github.com/bcmi220/esc4nmt",
+          "authors": "Zuchao Li, Rui Wang, Kehai Chen, Masao Utiyama, Eiichiro Sumita, Zhuosheng Zhang, and Hai Zhao",
+          "venue": "AAAI 2020"
+        },
+        {
+          "title": "Memory Network for Linguistic Structure Parsing",
+          "pdf": "https://ieeexplore.ieee.org/abstract/document/9222278",
+          "code": null,
+          "authors": "Zuchao Li, Chaoyu Guan, Hai Zhao, Rui Wang, Kevin Parnow, Zhuosheng Zhang",
+          "venue": "TASLP 2020"
+        }
+      ]
+    },
+    {
+      "year": 2019,
+      "items": [
+        {
+          "title": "Syntax-aware Multilingual Semantic Role Labeling",
+          "pdf": "https://arxiv.org/abs/1909.00310",
+          "code": "https://github.com/bcmi220/multilingual_srl",
+          "authors": "Shexia He#, Zuchao Li#, Hai Zhao*",
+          "venue": "EMNLP-IJCNLP 2019"
+        },
+        {
+          "title": "Dependency or Span, End-to-End Uniform Semantic Role Labeling",
+          "pdf": null,
+          "code": null,
+          "authors": "Zuchao Li, Shexia He, Hai Zhao, Yiqing Zhang, Zhuosheng Zhang, Xi Zhou, Xiang Zhou",
+          "venue": "AAAI 2019"
+        },
+        {
+          "title": "Cross-Domain Transfer Learning for Dependency Parsing",
+          "pdf": "http://tcci.ccf.org.cn/conference/2019_1007/papers/EV1.pdf",
+          "code": null,
+          "authors": "Zuchao Li, Junru Zhou, Hai Zhao",
+          "venue": "NLPCC 2019"
+        },
+        {
+          "title": "Effective Representation for Easy-First Dependency Parsing",
+          "pdf": "https://link.springer.com/chapter/10.1007/978-3-030-29908-8_28",
+          "code": null,
+          "authors": "Zuchao Li, Jiaxun Cai, Hai Zhao",
+          "venue": "PRICAI 2019"
+        }
+      ]
+    },
+    {
+      "year": 2018,
+      "items": [
+        {
+          "title": "Syntax for Semantic Role Labeling, to Be, or Not to Be",
+          "pdf": null,
+          "code": null,
+          "authors": "Shexia He#, Zuchao Li#, Hai Zhao*, Hongxiao Bai, Gongshen Liu",
+          "venue": "ACL 2018"
+        },
+        {
+          "title": "A Unified Syntax-aware Framework for Semantic Role Labeling",
+          "pdf": null,
+          "code": null,
+          "authors": "Zuchao Li, Shexia He, Jiaxun Cai, Zhuosheng Zhang, Hai Zhao, Gongshen Liu, Linlin Li, and Luo Si",
+          "venue": "EMNLP 2018"
+        },
+        {
+          "title": "Seq2seq Dependency Parsing",
+          "pdf": null,
+          "code": null,
+          "authors": "Zuchao Li, Jiaxun Cai, Shexia He and Hai Zhao",
+          "venue": "COLING 2018"
+        }
+      ]
+    }
+  ]
+}
+
