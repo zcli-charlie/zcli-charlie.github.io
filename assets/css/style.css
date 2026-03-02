@@ -475,6 +475,17 @@ img { display: block; max-width: 100%; }
   background: var(--accent-light);
   text-decoration: none;
 }
+.pub-btn-code {
+  color: var(--green);
+  border-color: #bbf7d0;
+  background: var(--green-bg);
+}
+.pub-btn-code:hover {
+  color: #14532d;
+  border-color: var(--green);
+  background: #dcfce7;
+  text-decoration: none;
+}
 
 /* Compact pub (no thumb) */
 .pub-compact {
