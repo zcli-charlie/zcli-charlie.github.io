@@ -1,6 +1,191 @@
 {
   "years": [
     {
+      "year": 2026,
+      "items": [
+        {
+          "title": "SongSage: A Large Musical Language Model with Lyric Generative Pre-training",
+          "pdf": "https://arxiv.org/abs/2601.01153",
+          "code": null,
+          "authors": "J Guo, J Li, J Wu, Zuchao Li, Y Yang, P Wang",
+          "venue": "arXiv 2026"
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "items": [
+        {
+          "title": "Scaling LLM Speculative Decoding: Non-Autoregressive Forecasting in Large-Batch Scenarios",
+          "pdf": null,
+          "code": null,
+          "authors": "L Shi, Zuchao Li, L Zhang, B Qi, G Liu, H Zhao",
+          "venue": "AAAI 2026"
+        },
+        {
+          "title": "End-to-end Contrastive Language-Speech Pretraining Model For Long-form Spoken Question Answering",
+          "pdf": null,
+          "code": null,
+          "authors": "J Hu, Zuchao Li, B Qi, L Guoming, P Wang",
+          "venue": "AAAI 2026"
+        },
+        {
+          "title": "Ghost in the Transformer: Tracing LLM Lineage with SVD-Fingerprint",
+          "pdf": null,
+          "code": null,
+          "authors": "S Wang, Z Ma, X Li, Zuchao Li",
+          "venue": "AAAI 2026"
+        },
+        {
+          "title": "Smallkv: Small Model Assisted Compensation of KV Cache Compression for Efficient LLM Inference",
+          "pdf": null,
+          "code": null,
+          "authors": "Y Zhao, Y Peng, CT Nguyen, Zuchao Li, X Wang, H Zhao, X Fu",
+          "venue": "NeurIPS 2025"
+        },
+        {
+          "title": "ToM: Leveraging Tree-oriented MapReduce for Long-Context Reasoning in Large Language Models",
+          "pdf": null,
+          "code": null,
+          "authors": "J Guo, Zuchao Li, J Wu, Q Wang, Y Li, L Zhang, H Zhao, Y Yang",
+          "venue": "EMNLP 2025, 17804-17823"
+        },
+        {
+          "title": "Faster In-Context Learning for LLMs via N-Gram Trie Speculative Decoding",
+          "pdf": null,
+          "code": null,
+          "authors": "J Chen, Q Li, Zuchao Li, B Qi, L Guoming, H Ai, H Zhao, P Wang",
+          "venue": "EMNLP 2025, 18051-18062"
+        },
+        {
+          "title": "Can Large Language Models Be Good Language Teachers?",
+          "pdf": null,
+          "code": null,
+          "authors": "LQ Xu, Q Li, T Peng, Zuchao Li, H Zhao, P Wang",
+          "venue": "EMNLP 2025, 23968-23982"
+        },
+        {
+          "title": "XQuant: Achieving Ultra-Low Bit KV Cache Quantization with Cross-Layer Compression",
+          "pdf": null,
+          "code": null,
+          "authors": "H Yang, Y Yao, Zuchao Li, B Qi, L Guoming, H Zhao",
+          "venue": "EMNLP 2025, 9796-9811"
+        },
+        {
+          "title": "Teaching your models to understand code via focal preference alignment",
+          "pdf": null,
+          "code": null,
+          "authors": "J Wu, H Li, X Zhang, X Liu, Y Huang, J Luo, Y Zhang, Zuchao Li, R Chu, Y Yang, ...",
+          "venue": "EMNLP 2025, 14014-14034"
+        },
+        {
+          "title": "From Parameters to Performance: A Data-Driven Study on LLM Structure and Development",
+          "pdf": null,
+          "code": null,
+          "authors": "S Wang, Zuchao Li, L Shi, B Du, H Zhao, Y Li, Q Wang",
+          "venue": "EMNLP 2025"
+        },
+        {
+          "title": "CoViPAL: Layer-wise Contextualized Visual Token Pruning for Large Vision-Language Models",
+          "pdf": null,
+          "code": null,
+          "authors": "Z Tang, Z Ma, S Wang, Zuchao Li, L Zhang, H Zhao, Y Li, Q Wang",
+          "venue": "EMNLP 2025"
+        },
+        {
+          "title": "What Limits Bidirectional Model's Generative Capabilities? A Uni-Bi-Directional Mixture-of-Expert Method For Bidirectional Fine-tuning",
+          "pdf": null,
+          "code": null,
+          "authors": "Zuchao Li, Y Hei, Q Li, L Zhang, P Wang, B Qi, L Guoming",
+          "venue": "ICML 2025"
+        },
+        {
+          "title": "Segment First or Comprehend First? Explore the Limit of Unsupervised Word Segmentation with Large Language Models",
+          "pdf": null,
+          "code": null,
+          "authors": "Zihong Zhang, Liqi He, Zuchao Li, L Zhang, Hai Zhao, Bo Du",
+          "venue": "ACL 2025 (Oral)"
+        },
+        {
+          "title": "Dialogue-RAG: Enhancing Retrieval for LLMs via Node-Linking Utterance Rewriting",
+          "pdf": null,
+          "code": null,
+          "authors": "Qiwei Li, Teng Xiao, Zuchao Li, Ping Wang, Mengjia Shen, Hai Zhao",
+          "venue": "ACL 2025, 24423-24438"
+        },
+        {
+          "title": "KV-latent: Dimensional-level KV Cache Reduction with Frequency-aware Rotary Positional Embedding",
+          "pdf": null,
+          "code": null,
+          "authors": "L Shi, Zuchao Li, L Zhang, G Liu, B Qi, H Zhao",
+          "venue": "ACL 2025"
+        },
+        {
+          "title": "SpindleKV: A Novel KV Cache Reduction Method Balancing Both Shallow and Deep Layers",
+          "pdf": null,
+          "code": null,
+          "authors": "Z Tang, S Luohe, Zuchao Li, B Qi, G Liu, L Zhang, P Wang",
+          "venue": "ACL 2025"
+        },
+        {
+          "title": "IAM: Efficient Inference through Attention Mapping between Different-scale LLMs",
+          "pdf": null,
+          "code": null,
+          "authors": "Y Zhao, Zuchao Li, H Zhao",
+          "venue": "ACL 2025"
+        },
+        {
+          "title": "DAC: A Dynamic Attention-aware Approach for Task-Agnostic Prompt Compression",
+          "pdf": null,
+          "code": null,
+          "authors": "Y Zhao, Zuchao Li, H Zhao, B Qi, G Liu",
+          "venue": "ACL 2025"
+        },
+        {
+          "title": "Label Drop for Multi-Aspect Relation Modeling in Universal Information Extraction",
+          "pdf": null,
+          "code": null,
+          "authors": "L Yang, J Li, E Ci, L Zhang, Zuchao Li, P Wang",
+          "venue": "NAACL 2025"
+        },
+        {
+          "title": "NOTA: Multimodal Music Notation Understanding for Visual Large Language Model",
+          "pdf": null,
+          "code": null,
+          "authors": "M Tang, J Li, L Yang, Z Zhang, J Tian, Zuchao Li, L Zhang, P Wang",
+          "venue": "NAACL Findings 2025"
+        },
+        {
+          "title": "Joint Automatic Speech Recognition And Structure Learning For Better Speech Understanding",
+          "pdf": null,
+          "code": null,
+          "authors": "J Hu, Zuchao Li, M Shen, H Ai, S Li, J Zhang",
+          "venue": "ICASSP 2025"
+        },
+        {
+          "title": "Imitate Before Detect: Aligning Machine Stylistic Preference for Machine-Revised Text Detection",
+          "pdf": null,
+          "code": null,
+          "authors": "J Chen, X Zhu, T Liu, Y Chen, X Chen, Y Yuan, CT Leong, Zuchao Li, T Long, ...",
+          "venue": "AAAI 2025"
+        },
+        {
+          "title": "SongSong: A Time Phonograph for Chinese SongCi Music from Thousand of Years Away",
+          "pdf": null,
+          "code": null,
+          "authors": "J Hu, J Li, Z Pan, C Chen, Zuchao Li, P Wang, L Zhang",
+          "venue": "AAAI 2025, 26229-26237"
+        },
+        {
+          "title": "DHI: Leveraging Diverse Hallucination Induction for Enhanced Contrastive Factuality Control in Large Language Models",
+          "pdf": null,
+          "code": null,
+          "authors": "J Guo, X Zeng, J Wu, Zuchao Li",
+          "venue": "ICONIP 2025, 214-228"
+        }
+      ]
+    },
+    {
       "year": 2024,
       "items": [
         {
@@ -253,7 +438,7 @@
           "title": "Multilingual Pre-training with Universal Dependency Learning",
           "pdf": "https://proceedings.neurips.cc/paper_files/paper/2021/hash/473803f0f2ebd77d83ee60daaa61f381-Abstract.html",
           "code": "https://github.com/KAI-SHU/UDPrLM",
-          "authors": "Kailai Sun*, Zuchao Li* and Hai Zhao",
+          "authors": "Kailai Sun*, Zuchao Li* and Hai Zhao*",
           "venue": "NeurIPS 2021"
         },
         {
@@ -264,7 +449,7 @@
           "venue": "EMNLP 2021"
         },
         {
-          "title": "HPSG-inspired Joint Neural Constituent and Dependency Parsing in O (n^3) Time Complexity",
+          "title": "HPSG-inspired Joint Neural Constituent and Dependency Parsing in O(n^3) Time Complexity",
           "pdf": "https://ieeexplore.ieee.org/abstract/document/9664335",
           "code": null,
           "authors": "Zuchao Li, Junru Zhou, Hai Zhao, and Kevin Parnow",
@@ -387,4 +572,3 @@
     }
   ]
 }
-

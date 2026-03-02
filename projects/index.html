@@ -1,130 +1,291 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Projects — Zuchao Li</title>
-    <meta name="description" content="Projects of Zuchao Li (Charlie)">
-    <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container header-grid">
-        <div class="avatar">
-          <img src="../assets/images/lizuchao.jpg" alt="Photo of Zuchao Li" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects &mdash; Zuchao Li</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    .research-section { margin-bottom: 64px; }
+    .research-header {
+      display: flex; align-items: center; gap: 16px;
+      margin-bottom: 28px; padding-bottom: 18px;
+      border-bottom: 2px solid var(--rule);
+    }
+    .research-icon {
+      width: 52px; height: 52px; border-radius: var(--r-lg);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px; flex-shrink: 0;
+    }
+    .icon-blue   { background: #eff6ff; }
+    .icon-purple { background: #faf5ff; }
+    .icon-green  { background: #f0fdf4; }
+    .research-header-text h2 {
+      font-family: var(--font-serif); font-size: 1.55rem;
+      font-weight: 700; color: var(--ink); margin-bottom: 4px;
+    }
+    .research-header-text p {
+      font-size: 0.88rem; color: var(--ink-3); line-height: 1.5;
+    }
+    .proj-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 20px;
+    }
+    .proj-card {
+      background: var(--bg-white); border: 1px solid var(--rule);
+      border-radius: var(--r-xl); padding: 24px 26px;
+      transition: box-shadow .2s, transform .2s, border-color .2s;
+      position: relative; overflow: hidden;
+    }
+    .proj-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0;
+      height: 3px; background: linear-gradient(90deg, var(--accent), #60a5fa);
+      opacity: 0; transition: opacity .2s;
+    }
+    .proj-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); border-color: #c7d7f7; }
+    .proj-card:hover::before { opacity: 1; }
+    .proj-card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+    .proj-name { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 700; color: var(--ink); line-height: 1.4; }
+    .proj-status { font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; }
+    .status-ongoing { background: var(--green-bg); color: var(--green); border: 1px solid #bbf7d0; }
+    .status-done    { background: var(--bg-subtle); color: var(--ink-3); border: 1px solid var(--rule); }
+    .proj-desc { font-size: 0.88rem; color: var(--ink-2); line-height: 1.65; margin-bottom: 14px; }
+    .proj-papers { font-size: 0.8rem; color: var(--ink-3); margin-bottom: 14px; line-height: 1.5; }
+    .proj-papers strong { color: var(--ink-2); font-weight: 600; }
+    .proj-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .proj-tag { font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 20px; background: var(--accent-light); color: var(--accent); border: 1px solid #bfdbfe; }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-brand">Zuchao Li</a>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../publications/index.html">Publications</a>
+      <a href="index.html" class="active">Projects</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-banner">
+  <div class="page-banner-inner">
+    <h1>Research Projects</h1>
+  </div>
+</div>
+
+<main class="main-content">
+  <div class="wrap">
+
+    <!-- Direction 1: Efficient LLMs -->
+    <div class="research-section">
+      <div class="research-header">
+        <div class="research-icon icon-blue">&#x26A1;</div>
+        <div class="research-header-text">
+          <h2>Efficient LLMs</h2>
+          <p>KV cache compression, inference acceleration, speculative decoding, context compression, and parameter-efficient fine-tuning for large language models.</p>
         </div>
-        <div class="intro">
-          <h1>Projects</h1>
-          <p class="meta">Research projects and demos</p>
+      </div>
+      <div class="proj-grid">
+
+        <div class="proj-card">
+          <div class="proj-card-top">
+            <div class="proj-name">KV Cache Compression</div>
+            <span class="proj-status status-ongoing">Ongoing</span>
+          </div>
+          <div class="proj-desc">Reducing the memory footprint of KV cache in LLMs through dimensional-level reduction, quantization, and layer-aware strategies, enabling efficient long-context inference without quality loss.</div>
+          <div class="proj-papers"><strong>Representative works:</strong> KV-Latent (ACL 2025), SpindleKV (ACL 2025), XQuant (EMNLP 2025), SmallKV (NeurIPS 2025), CoViPAL: Layer-wise Contextualized Visual Token Pruning (EMNLP Findings 2025)</div>
+          <div class="proj-tags">
+            <span class="proj-tag">KV Cache</span>
+            <span class="proj-tag">Quantization</span>
+            <span class="proj-tag">Long-Context</span>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-card-top">
+            <div class="proj-name">Inference Acceleration &amp; Speculative Decoding</div>
+            <span class="proj-status status-ongoing">Ongoing</span>
+          </div>
+          <div class="proj-desc">Speeding up LLM inference via speculative decoding, attention mapping between models of different scales, and N-gram trie based in-context learning acceleration for large-batch scenarios.</div>
+          <div class="proj-papers"><strong>Representative works:</strong> IAM (ACL 2025), Faster In-Context Learning via N-Gram Trie Speculative Decoding (EMNLP 2025), Scaling LLM Speculative Decoding (AAAI 2026)</div>
+          <div class="proj-tags">
+            <span class="proj-tag">Speculative Decoding</span>
+            <span class="proj-tag">Attention</span>
+            <span class="proj-tag">Inference Speed</span>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-card-top">
+            <div class="proj-name">Context &amp; Prompt Compression</div>
+            <span class="proj-status status-ongoing">Ongoing</span>
+          </div>
+          <div class="proj-desc">Compressing long contexts and prompts to reduce computational cost while preserving semantic fidelity, including dynamic attention-aware prompt compression and task-agnostic approaches for streaming LLMs.</div>
+          <div class="proj-papers"><strong>Representative works:</strong> DAC (ACL 2025), SirLLM (ACL 2024), Compressing Context to Enhance Inference Efficiency (EMNLP 2023), ToM (EMNLP 2025)</div>
+          <div class="proj-tags">
+            <span class="proj-tag">Prompt Compression</span>
+            <span class="proj-tag">Long Context</span>
+            <span class="proj-tag">Streaming</span>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-card-top">
+            <div class="proj-name">Parameter-Efficient Fine-Tuning</div>
+            <span class="proj-status status-ongoing">Ongoing</span>
+          </div>
+          <div class="proj-desc">Exploring sparse fine-tuning, selective prefix tuning, and bidirectional model fine-tuning with mixture-of-expert methods to adapt large pre-trained models with minimal parameter updates.</div>
+          <div class="proj-papers"><strong>Representative works:</strong> Sparse is Enough in Fine-tuning Pre-trained Large Language Models (ICML 2024), Selective Prefix Tuning (ACL Findings 2024), Uni-Bi-Directional MoE (ICML 2025)</div>
+          <div class="proj-tags">
+            <span class="proj-tag">PEFT</span>
+            <span class="proj-tag">Sparse Fine-tuning</span>
+            <span class="proj-tag">MoE</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Direction 2: Language Understanding and Reasoning -->
+    <div class="research-section">
+      <div class="research-header">
+        <div class="research-icon icon-green">&#x1F524;</div>
+        <div class="research-header-text">
+          <h2>Language Understanding and Reasoning</h2>
+          <p>LLM reasoning, computational linguistics, and a broad range of NLP tasks including information extraction, machine translation, and sentiment analysis.</p>
         </div>
       </div>
-    </header>
-    <nav class="site-nav">
-      <div class="container nav-inner">
-        <a href="../index.html">Home</a>
-        <a href="../publications/index.html">Publications</a>
-        <a href="../projects/index.html" class="active">Projects</a>
-        <a href="../news/index.html">News</a>
-        <a href="../teaching/index.html">Teaching</a>
-        <a href="../funding/index.html">Funding</a>
-        <a href="../talks/index.html">Talks</a>
+      <div class="proj-grid">
+
+        <div class="proj-card">
+          <div class="proj-card-top">
+            <div class="proj-name">LLM Reasoning</div>
+            <span class="proj-status status-ongoing">Ongoing</span>
+          </div>
+          <div class="proj-desc">Enhancing LLM reasoning capabilities through structured thought processes such as graph-of-thought, tree-oriented MapReduce, knowledge transfer, and reference-trustable decoding for more reliable inference.</div>
+          <div class="proj-papers"><strong>Representative works:</strong> GoT: Effective Graph-of-Thought Reasoning (NAACL Findings 2024), Reference Trustable Decoding (NeurIPS 2024), GKT (ACL Findings 2024), ToM (EMNLP 2025)</div>
+          <div class="proj-tags">
+            <span class="proj-tag">Reasoning</span>
+            <span class="proj-tag">RAG</span>
+            <span class="proj-tag">Knowledge Transfer</span>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-card-top">
+            <div class="proj-name">Computational Linguistics</div>
+            <span class="proj-status status-done">Completed</span>
+          </div>
+          <div class="proj-desc">Developing unified and syntax-aware frameworks for semantic role labeling and dependency parsing, as well as neural machine translation with explicit compression and unsupervised approaches with universal grammar.</div>
+          <div class="proj-papers"><strong>Representative works:</strong> A Unified Syntax-aware Framework for SRL (EMNLP 2018), Syntax-Guided SRL (ACL 2022), Global Greedy Dependency Parsing (AAAI 2020), Explicit Sentence Compression for NMT (AAAI 2020)</div>
+          <div class="proj-tags">
+            <span class="proj-tag">SRL</span>
+            <span class="proj-tag">Dependency Parsing</span>
+            <span class="proj-tag">Machine Translation</span>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-card-top">
+            <div class="proj-name">NLP Tasks</div>
+            <span class="proj-status status-ongoing">Ongoing</span>
+          </div>
+          <div class="proj-desc">Advancing a broad range of NLP tasks including universal information extraction, named entity recognition, aspect-based sentiment analysis, and retrieval-augmented question answering.</div>
+          <div class="proj-papers"><strong>Representative works:</strong> Label Drop for Universal Information Extraction (NAACL 2025), Named Entity Recognition as Corpus Aware Holistic Structure Parsing (COLING 2022), A Novel Energy Based Model for Multi-Modal ABSA (AAAI 2024), Unsupervised NMT with Universal Grammar (EMNLP 2021)</div>
+          <div class="proj-tags">
+            <span class="proj-tag">Information Extraction</span>
+            <span class="proj-tag">NER</span>
+            <span class="proj-tag">Sentiment Analysis</span>
+          </div>
+        </div>
+
       </div>
-    </nav>
+    </div>
 
-    <main class="container">
-      <section class="section">
-        <h2>All Projects</h2>
-        <ul class="projects-grid">
-          <li class="project-card">
-            <a class="project-link" href="on-device-llms/index.html">
-              <img src="../assets/images/project-placeholder.svg" alt="On-device Large Models" loading="lazy" />
-              <div class="project-body">
-                <h3 class="project-title">On-device Large Models</h3>
-                <p class="project-desc">Deploying foundation models on edge devices via quantization, distillation, structured sparsity, and system co-design for efficient memory/latency.</p>
-                <div class="project-meta">
-                  <span class="badge">Ongoing</span>
-                  <span class="tag">On-device</span>
-                  <span class="tag">Quantization</span>
-                  <span class="tag">Distillation</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="project-card">
-            <a class="project-link" href="model-training-optimization/index.html">
-              <img src="../assets/images/project-placeholder.svg" alt="Model Training and Optimization" loading="lazy" />
-              <div class="project-body">
-                <h3 class="project-title">Model Training Optimization</h3>
-                <p class="project-desc">General-purpose optimization for deep models and LLMs. </p>
-                <div class="project-meta">
-                  <span class="badge">Ongoing</span>
-                  <span class="tag">Optimization</span>
-                  <span class="tag">LLMs</span>
-                  <span class="tag">Efficiency</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="project-card">
-            <a class="project-link" href="model-inference-optimization/index.html">
-              <img src="../assets/images/project-placeholder.svg" alt="Model Inference Optimization" loading="lazy" />
-              <div class="project-body">
-                <h3 class="project-title">Model Inference Optimization</h3>
-                <p class="project-desc">Efficient LLM inference via KV cache reduction, prompt compression, streaming retention, and token-efficient decoding.</p>
-                <div class="project-meta">
-                  <span class="badge">Ongoing</span>
-                  <span class="tag">Inference</span>
-                  <span class="tag">LLMs</span>
-                  <span class="tag">Efficiency</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="project-card">
-            <a class="project-link" href="document-intelligence/index.html">
-              <img src="../assets/images/project-placeholder.svg" alt="Document Recognition and Document Intelligence" loading="lazy" />
-              <div class="project-body">
-                <h3 class="project-title">Document Recognition and Intelligence</h3>
-                <p class="project-desc">Layout analysis, structure understanding, and intelligent document systems across scanned and born-digital documents.</p>
-                <div class="project-meta">
-                  <span class="badge">Ongoing</span>
-                  <span class="tag">Document AI</span>
-                  <span class="tag">Layout</span>
-                  <span class="tag">Vision+Language</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li class="project-card">
-            <a class="project-link" href="llm-structure-parsing/index.html">
-              <img src="../assets/images/project-placeholder.svg" alt="Language Structure Parsing in the LLM Era" loading="lazy" />
-              <div class="project-body">
-                <h3 class="project-title">Language Structure Parsing in the LLM Era</h3>
-                <p class="project-desc">Syntactic and semantic structure induction with and for LLMs: in-context parsing, alignment, and robust structured reasoning.</p>
-                <div class="project-meta">
-                  <span class="badge">Ongoing</span>
-                  <span class="tag">Parsing</span>
-                  <span class="tag">LLMs</span>
-                  <span class="tag">Structure</span>
-                </div>
-              </div>
-            </a>
-          </li>
-          <!-- Add more project cards below following the same structure -->
-        </ul>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        © <span id="year"></span> Zuchao Li. Built with static HTML/CSS. Hosted on GitHub Pages.
+    <!-- Direction 3: Multimodal AI -->
+    <div class="research-section">
+      <div class="research-header">
+        <div class="research-icon icon-purple">&#x1F3AD;</div>
+        <div class="research-header-text">
+          <h2>Multimodal AI</h2>
+          <p>Multimodal understanding and generation, vision-language models, speech recognition, music AI, and document intelligence.</p>
+        </div>
       </div>
-    </footer>
+      <div class="proj-grid">
 
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-  </body>
-  </html>
+        <div class="proj-card">
+          <div class="proj-card-top">
+            <div class="proj-name">Vision-Language Models</div>
+            <span class="proj-status status-ongoing">Ongoing</span>
+          </div>
+          <div class="proj-desc">Building and improving large vision-language models for multimodal understanding and generation, including visual token pruning, cross-modal adaptation, and multi-modal auto-regressive modeling.</div>
+          <div class="proj-papers"><strong>Representative works:</strong> Multi-modal Auto-regressive Modeling via Visual Tokens (ACM Multimedia 2024), AMIA: Automatic Masking and Joint Intention Analysis Makes LVLMs Robust Jailbreak Defenders (EMNLP Findings 2025)</div>
+          <div class="proj-tags">
+            <span class="proj-tag">VLM</span>
+            <span class="proj-tag">Visual Tokens</span>
+            <span class="proj-tag">Multimodal Generation</span>
+          </div>
+        </div>
 
+        <div class="proj-card">
+          <div class="proj-card-top">
+            <div class="proj-name">Speech &amp; Audio Understanding</div>
+            <span class="proj-status status-ongoing">Ongoing</span>
+          </div>
+          <div class="proj-desc">Advancing automatic speech recognition with multimodal signals (vision hotwords) and joint structure learning, as well as contrastive language-speech pretraining for long-form spoken question answering.</div>
+          <div class="proj-papers"><strong>Representative works:</strong> VHASR: A Multimodal Speech Recognition System With Vision Hotwords (EMNLP 2024), Joint Automatic Speech Recognition And Structure Learning (ICASSP 2025)</div>
+          <div class="proj-tags">
+            <span class="proj-tag">ASR</span>
+            <span class="proj-tag">Speech</span>
+            <span class="proj-tag">Audio-Language</span>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-card-top">
+            <div class="proj-name">Music AI</div>
+            <span class="proj-status status-ongoing">Ongoing</span>
+          </div>
+          <div class="proj-desc">Applying AI to music understanding, generation, and evaluation &mdash; including symbolic music understanding, music notation comprehension for LLMs, large-scale music evaluation benchmarks, and lyric generation.</div>
+          <div class="proj-papers"><strong>Representative works:</strong> NOTA: Multimodal Music Notation Understanding (NAACL Findings 2025), N-gram Unsupervised Compoundation for Symbolic Music Understanding (AAAI 2024), The Music Maestro Benchmark (ACL Findings 2024), SongSong (AAAI 2025)</div>
+          <div class="proj-tags">
+            <span class="proj-tag">Music Generation</span>
+            <span class="proj-tag">Symbolic Music</span>
+            <span class="proj-tag">Music LLM</span>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-card-top">
+            <div class="proj-name">Document Intelligence</div>
+            <span class="proj-status status-ongoing">Ongoing</span>
+          </div>
+          <div class="proj-desc">Understanding complex document structures using hypergraph-based representations and dependency-aware attention for semantic entity recognition, information extraction, and document-level understanding.</div>
+          <div class="proj-papers"><strong>Representative works:</strong> Hypergraph based Understanding for Document Semantic Entity Recognition (ACL 2024), Multi-Modal Latent Space Learning for Chain-of-Thought Reasoning (AAAI 2024)</div>
+          <div class="proj-tags">
+            <span class="proj-tag">Document Understanding</span>
+            <span class="proj-tag">Hypergraph</span>
+            <span class="proj-tag">Entity Recognition</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    &copy; 2026 Zuchao Li &nbsp;&middot;&nbsp; Wuhan University &nbsp;&middot;&nbsp;
+    <a href="https://github.com/zcli-charlie/zcli-charlie.github.io" target="_blank" rel="noopener">Source on GitHub</a>
+  </div>
+</footer>
+
+</body>
+</html>
