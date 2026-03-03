@@ -486,6 +486,17 @@ img { display: block; max-width: 100%; }
   background: #dcfce7;
   text-decoration: none;
 }
+.pub-btn-data {
+  color: #c2410c;
+  border-color: #fed7aa;
+  background: #fff7ed;
+}
+.pub-btn-data:hover {
+  color: #7c2d12;
+  border-color: #c2410c;
+  background: #ffedd5;
+  text-decoration: none;
+}
 
 /* Compact pub (no thumb) */
 .pub-compact {
