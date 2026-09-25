@@ -555,6 +555,14 @@ img { display: block; max-width: 100%; }
 }
 .news-text { color: var(--ink-2); }
 .news-text strong { color: var(--ink); }
+/* 新闻条目第二行：中文 */
+.news-zh {
+  display: block;
+  margin-top: 3px;
+  font-size: 12.6px;
+  line-height: 1.55;
+  color: var(--ink-4);
+}
 
 /* ── Projects ──────────────────────────────────────────────── */
 .proj-section { margin-bottom: 44px; }
@@ -712,6 +720,9 @@ img { display: block; max-width: 100%; }
   margin-bottom: 34px;
 }
 .art-lede strong { color: var(--ink); font-weight: 600; }
+/* 双语里的中文行（导语、页脚等处通用） */
+.lede-zh { display: block; margin-top: 11px; color: var(--ink-3); }
+.art-foot .lede-zh { margin-top: 5px; }
 
 .art-toc {
   background: var(--bg-white);
@@ -750,11 +761,9 @@ img { display: block; max-width: 100%; }
 .art-sec { margin-bottom: 54px; scroll-margin-top: 88px; }
 .art-sec:last-of-type { margin-bottom: 40px; }
 .art-h2 {
-  display: flex;
-  align-items: baseline;
-  gap: 11px;
   font-size: 1.42rem;
   font-weight: 700;
+  line-height: 1.35;
   color: var(--ink);
   letter-spacing: -.2px;
   padding-bottom: 11px;
@@ -766,31 +775,69 @@ img { display: block; max-width: 100%; }
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--accent);
+  margin-right: 11px;
+}
+.art-h2-zh {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--ink-3);
+  margin-top: 4px;
 }
 .art-sec-intro {
   font-size: 14.5px;
   line-height: 1.9;
   color: var(--ink-3);
-  margin-bottom: 26px;
+  margin-bottom: 32px;
+}
+.art-sec-intro .intro-zh { margin-top: 8px; color: var(--ink-4); }
+
+/* 每篇论文 = 正常图文排版（不上卡片、不加边框），篇与篇之间只用一条细线分隔 */
+.paper {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 8px 24px;
+  scroll-margin-top: 88px;
+}
+.paper + .paper {
+  margin-top: 36px;
+  padding-top: 36px;
+  border-top: 1px solid var(--rule);
+}
+/* 宽横幅图（题图很扁）→ 图通栏在上，正文在下 */
+.paper--wide { grid-template-columns: minmax(0, 1fr); }
+/* 常规/竖版题图 → 左图右文 */
+.paper--side {
+  grid-template-columns: minmax(0, 44%) minmax(0, 1fr);
+  align-items: start;
+}
+.paper--side .paper-fig { margin-top: 4px; }
+.paper-body { min-width: 0; }
+
+.paper-fig { margin: 0 0 6px; }
+.paper-fig img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  background: var(--bg-white);
 }
 
-.paper {
-  background: var(--bg-white);
-  border: 1px solid var(--rule);
-  border-radius: var(--r-lg);
-  padding: 24px 26px;
-  margin-bottom: 18px;
-  scroll-margin-top: 88px;
-  transition: border-color .15s, box-shadow .15s;
-}
-.paper:hover { border-color: #c7d2fe; box-shadow: var(--shadow-sm); }
 .paper-title {
   font-family: var(--font-serif);
-  font-size: 1.06rem;
+  font-size: 1.14rem;
   font-weight: 700;
-  line-height: 1.45;
+  line-height: 1.42;
   color: var(--ink);
-  margin-bottom: 9px;
+  margin-bottom: 5px;
+}
+.paper-title-zh {
+  font-size: 14.2px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--ink-3);
+  margin-bottom: 11px;
 }
 .paper-meta {
   display: flex;
@@ -821,20 +868,23 @@ img { display: block; max-width: 100%; }
   margin-bottom: 12px;
 }
 .paper-authors strong { color: var(--ink-2); font-weight: 600; }
+.paper-en,
 .paper-zh {
   font-size: 14.2px;
   line-height: 1.95;
   color: var(--ink-2);
   text-align: justify;
 }
+.paper-en + .paper-en,
+.paper-zh + .paper-zh { margin-top: 9px; }
+/* 中文段落在英文之后，用稍浅的字色分栏，不做框 */
+.paper-zh { margin-top: 13px; color: var(--ink-3); }
 .paper-zh + .paper-zh { margin-top: 9px; }
 .paper-links {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
   margin-top: 16px;
-  padding-top: 13px;
-  border-top: 1px dashed var(--rule);
 }
 .paper-btn {
   display: inline-flex;
@@ -868,12 +918,17 @@ img { display: block; max-width: 100%; }
 @media (max-width: 960px) {
   .news-article { max-width: 100%; }
 }
+/* 左图右文在小屏回落为「图在上、文在下」 */
+@media (max-width: 760px) {
+  .paper--side { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .paper--side .paper-fig { margin: 0 0 10px; }
+}
 @media (max-width: 640px) {
   .art-lede { padding: 16px 18px; font-size: 14.5px; }
   .art-toc { padding: 16px 18px; }
   .art-h2 { font-size: 1.24rem; }
-  .paper { padding: 18px 16px; }
   .paper-title { font-size: 1rem; }
+  .paper + .paper { margin-top: 28px; padding-top: 28px; }
 }
 @media (max-width: 960px) {
   :root { --pad: 28px; }
