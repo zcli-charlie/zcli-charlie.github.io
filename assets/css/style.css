@@ -793,29 +793,19 @@ img { display: block; max-width: 100%; }
 }
 .art-sec-intro .intro-zh { margin-top: 8px; color: var(--ink-4); }
 
-/* 每篇论文 = 正常图文排版（不上卡片、不加边框），篇与篇之间只用一条细线分隔 */
+/* 每篇论文 = 一条新闻的正文式排版：题名／作者／摘要（英中）→ 主图 → 链接（纯文本）。
+   不上卡片、不加边框；篇与篇之间靠间距分开，只留一条极淡的发丝线便于扫读。 */
 .paper {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 8px 24px;
   scroll-margin-top: 88px;
 }
 .paper + .paper {
-  margin-top: 36px;
-  padding-top: 36px;
+  margin-top: 58px;
+  padding-top: 44px;
   border-top: 1px solid var(--rule);
 }
-/* 宽横幅图（题图很扁）→ 图通栏在上，正文在下 */
-.paper--wide { grid-template-columns: minmax(0, 1fr); }
-/* 常规/竖版题图 → 左图右文 */
-.paper--side {
-  grid-template-columns: minmax(0, 44%) minmax(0, 1fr);
-  align-items: start;
-}
-.paper--side .paper-fig { margin-top: 4px; }
-.paper-body { min-width: 0; }
 
-.paper-fig { margin: 0 0 6px; }
+/* 主图（题图）统一放在摘要下方 */
+.paper-fig { margin: 26px 0 0; }
 .paper-fig img {
   display: block;
   width: 100%;
@@ -823,6 +813,8 @@ img { display: block; max-width: 100%; }
   border-radius: 5px;
   background: var(--bg-white);
 }
+/* 竖版题图（高 > 宽）不铺满，居中收窄，免得长图把正文挤走 */
+.paper-fig--portrait { max-width: 560px; margin-left: auto; margin-right: auto; }
 
 .paper-title {
   font-family: var(--font-serif);
@@ -880,32 +872,16 @@ img { display: block; max-width: 100%; }
 /* 中文段落在英文之后，用稍浅的字色分栏，不做框 */
 .paper-zh { margin-top: 13px; color: var(--ink-3); }
 .paper-zh + .paper-zh { margin-top: 9px; }
+/* 链接：直接用纯文本地址，不做按钮 */
 .paper-links {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
   margin-top: 16px;
+  font-size: 12.8px;
+  line-height: 2.05;
+  color: var(--ink-4);
+  overflow-wrap: anywhere;
 }
-.paper-btn {
-  display: inline-flex;
-  align-items: center;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 3px 12px;
-  border-radius: 20px;
-  border: 1.5px solid var(--rule);
-  background: none;
-  color: var(--ink-3);
-  transition: all .14s;
-}
-.paper-btn:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  background: var(--accent-light);
-  text-decoration: none;
-}
-.paper-btn-code { border-color: #bbf7d0; background: var(--green-bg); color: var(--green); }
-.paper-btn-code:hover { border-color: var(--green); background: #dcfce7; color: var(--green); }
+.paper-links a { color: var(--accent); text-decoration: none; }
+.paper-links a:hover { text-decoration: underline; }
 .art-foot {
   font-size: 13px;
   color: var(--ink-4);
@@ -918,17 +894,13 @@ img { display: block; max-width: 100%; }
 @media (max-width: 960px) {
   .news-article { max-width: 100%; }
 }
-/* 左图右文在小屏回落为「图在上、文在下」 */
-@media (max-width: 760px) {
-  .paper--side { grid-template-columns: minmax(0, 1fr); gap: 6px; }
-  .paper--side .paper-fig { margin: 0 0 10px; }
-}
 @media (max-width: 640px) {
   .art-lede { padding: 16px 18px; font-size: 14.5px; }
   .art-toc { padding: 16px 18px; }
   .art-h2 { font-size: 1.24rem; }
   .paper-title { font-size: 1rem; }
-  .paper + .paper { margin-top: 28px; padding-top: 28px; }
+  .paper + .paper { margin-top: 40px; padding-top: 32px; }
+  .paper-fig { margin-top: 20px; }
 }
 @media (max-width: 960px) {
   :root { --pad: 28px; }
